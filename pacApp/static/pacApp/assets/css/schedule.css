@@ -114,11 +114,10 @@ input[type="radio"]#groupM:checked ~ .reveal-if-activeGroup {
 }
 
 /* CSS FOR EACH OF THE DIFFERENT GROUPS */
-
-.g11 {
-  background-color: #008080;
+.hello {
+  background-color: #b76e79;
   text-align:center;
-  color: white;
+  color:white;
 
 }
 
@@ -130,6 +129,18 @@ input[type="radio"]#groupM:checked ~ .reveal-if-activeGroup {
  
 }
 
+.g2 {
+  background-color: orange;
+  text-align:center;
+  color:white;
+}
+
+
+.g3 {
+  background-color: crimson;
+  text-align:center;
+  color:white;
+}
 
 .g4 {
   background-color:#002366;
@@ -137,11 +148,22 @@ input[type="radio"]#groupM:checked ~ .reveal-if-activeGroup {
   color:white;
 }
 
-.g9 {
-  background-color: #DB7093;
+.g5{
+  background-color:#FFC0CB;
   text-align:center;
   color:white;
+}
 
+.g6 {
+  background-color: #0d98ba;
+  text-align:center;
+  color:white;
+}
+
+.g7 {
+  background-color: #FF1493;
+  text-align:center;
+  color:white;
 }
 
 .g8 {
@@ -151,10 +173,11 @@ input[type="radio"]#groupM:checked ~ .reveal-if-activeGroup {
 
 }
 
-.g6 {
-  background-color: #0d98ba;
+.g9 {
+  background-color: #DB7093;
   text-align:center;
   color:white;
+
 }
 
 .g10 {
@@ -163,10 +186,11 @@ input[type="radio"]#groupM:checked ~ .reveal-if-activeGroup {
   color:white;
 }
 
-.g2 {
-  background-color: orange;
+.g11 {
+  background-color: #008080;
   text-align:center;
-  color:white;
+  color: white;
+
 }
 
 .g12 {
@@ -175,28 +199,53 @@ input[type="radio"]#groupM:checked ~ .reveal-if-activeGroup {
   color:white;
 }
 
-
-.hello {
-  background-color: #b76e79;
-  text-align:center;
-  color:white;
-
-}
-
-.g7 {
-  background-color: #FF1493;
+.g13 {
+  background-color: lightblue;
   text-align:center;
   color:white;
 }
 
-.g3 {
-  background-color: crimson;
+.g14 {
+  background-color: #008080;
+  text-align:center;
+  color: white;
+
+}
+
+.g15 {
+  background-color: #9b1c31;
   text-align:center;
   color:white;
 }
 
-.g5{
-  background-color:#FFC0CB;
+.g16 {
+  background-color: lightblue;
+  text-align:center;
+  color:white;
+}
+
+.g17 {
+  background-color: #008080;
+  text-align:center;
+  color: white;
+
+}
+
+.g18 {
+  background-color: #9b1c31;
+  text-align:center;
+  color:white;
+}
+
+.g19 {
+  background-color: #008080;
+  text-align:center;
+  color: white;
+
+}
+
+.g20 {
+  background-color: #9b1c31;
   text-align:center;
   color:white;
 }

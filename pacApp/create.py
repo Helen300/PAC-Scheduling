@@ -5,6 +5,7 @@ from .models import Booking, Group, Studio
 import datetime
 from datetime import date, timedelta
 
+
 # showing which studios are currently available 
 def carouselAvailable(starttoday, currenttime):
     notfree = Booking.objects.filter(start_time__exact=currenttime).filter(
@@ -119,6 +120,8 @@ def createContext(startdate, groups):
       context['Wilcox'] = wilNew
       context['WilcoxGray'] = wilGray 
 
+    context['dance_groups'] = getAllGroups()
+
     return context
 
 
@@ -147,6 +150,7 @@ def create_booking(date, studio, name, nameid, starttime, endtime, day, profile)
       book.save()
       count += 1
     print(count)
+
     return 1
 
 # delete the booking
@@ -171,3 +175,13 @@ def delete_booking(date, studio, name, nameid, starttime, endtime, day, profile)
         print('not able to drop')
         return 0 
     return 1
+
+def getAllGroups(): 
+    groups = Group.objects.all()
+    dance_groups = dict()
+    for g in groups:
+        if g.group_id == 0: 
+            continue
+        dance_groups[g.group_name] = g.group_id
+    print(dance_groups)
+    return dance_groups

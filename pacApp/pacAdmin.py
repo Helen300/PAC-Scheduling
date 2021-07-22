@@ -23,7 +23,7 @@ import random
 import calendar
 import json
 from .utils import studentInfo, handleDateStr, handleGroup, handledate, get_range, get_duration,  must_be_pac
-from .create import createContext, create_booking, delete_booking
+from .create import createContext, create_booking, delete_booking, getAllGroups
 # from uniauth.models import Institution, InstitutionAccount, LinkedEmail
 
 # Create your views here.
@@ -108,8 +108,7 @@ def handle_1ams(time):
 
 def insert_ad_request(request: HttpResponse):
 
-    groups_list = ['BAC', 'Bhangra', 'BodyHype', 'Disiac', 'eXpressions', 'HighSteppers',
-                        'Kokopops', 'Naacho', 'PUB', 'Six14', 'Sympoh', 'Triple8']
+    groups_list = list(getAllGroups().keys())
 
     studioList = {'bloomberg': 0, 'dillondance': 1, 'dillonmar': 2, 'dillonmpr': 3,
                   'murphy': 4, 'ns': 5, 'nswarmup': 6, 'nstheatre': 7, 'whitman': 8, 'wilcox': 9}
@@ -209,6 +208,8 @@ def adminForm(request):
     if studentDets != None:
       first_name = studentDets['first_name']
       context['firstname'] = first_name
+
+    context["dance_groups"] = getAllGroups()
 
     # for item in context['all_requests']:
     #	print(item.name)
@@ -450,8 +451,7 @@ def scheduling_alg(request: HttpResponse):
                   'murphy': 4, 'ns': 5, 'nswarmup': 6, 'nstheatre': 7, 'whitman': 8, 'wilcox': 9}
     studios = list(studioList.keys())
 
-    groups_list = ['BAC', 'Bhangra', 'BodyHype', 'Disiac', 'eXpressions', 'HighSteppers',
-                        'Kokopops', 'Naacho', 'PUB', 'Six14', 'Sympoh', 'Triple8']
+    groups_list = list(getAllGroups().keys())
 
     df_request = pd.DataFrame(data=None, columns=['name', 
     'company_day_1', 'company_start_time_1', 'company_end_time_1', 'company_studio_1',

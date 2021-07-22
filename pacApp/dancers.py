@@ -41,10 +41,6 @@ def schedule(request):
         first_name = studentDets['first_name']
         context['firstname'] = first_name
 
-    all_dance_groups = getAllGroups()
-    context['dance_groups'] = all_dance_groups
-    print(all_dance_groups)
-
     return render(request, "templates/pacApp/schedule.html", context)
 
 
@@ -117,6 +113,7 @@ def updateBooking(request):
     context = createContext(startdate, groups)
     context['openday'] = openday.strftime('%w')
     context['booksuccess'] = success
+
     return render(request, "templates/pacApp/tableElements/calendar.html", context)
 
 # for multiple booking at a time
@@ -164,7 +161,3 @@ def updateDropping(request: HttpResponse):
     context['openday'] = openday.strftime('%w')
     context['dropsuccess'] = success
     return render(request, "templates/pacApp/tableElements/calendar.html", context)
-
-def getAllGroups():
-    groups = Booking.objects.all()
-    return groups

@@ -6,6 +6,7 @@ import datetime
 import calendar
 import json
 
+
 # rendering the home page with today's date
 def homepage(request):
     try:

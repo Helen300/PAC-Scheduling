@@ -535,7 +535,7 @@ def scheduling_alg(request: HttpResponse):
     avail = {}
     for day in copy.deepcopy(days_of_week):
         hours = [i for i in range(0, 25)]
-        if (day is 'Sunday') or (day is 'Saturday'):
+        if (day == 'Sunday') or (day == 'Saturday'):
             for i in range(1, 9):
                 hours.remove(i)
         else:

@@ -1,8 +1,9 @@
 
 <div id="groupselect" class="form-check">
 	<span style="font-size:0.95em"> Select the groups that you want to see spaces for </span><br>
-	
-	<input type="checkbox" class="select" id="BAC" name="selectGroups" value="1" onchange="setupWeek('group');"><label class="selectgroup" for="BAC">BAC</label>
+	{% for group in dance_groups %}
+		<input type="checkbox" class="select" id="{{ group }}" name="selectGroups" value="1" onchange="setupWeek('group');"><label class="selectgroup" for="{{ group }}">{{ group }}</label>
+	{% endfor %}
 
 	<input type="checkbox" class="select" id="Bhangra" name="selectGroups" value="2" onchange="setupWeek('group');"><label class="selectgroup" for="Bhangra">Bhangra</label>
 

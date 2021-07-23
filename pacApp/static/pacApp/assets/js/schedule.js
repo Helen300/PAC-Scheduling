@@ -707,9 +707,9 @@ function sendbook(id) {
         return;
       }
       var userid = parseInt(($("#selectgroup option:selected" ).val()));
-      var groups = ['BAC', 'Bhangra', 'BodyHype', 'diSiac', 'eXpressions', 'HighSteppers',
-                        'KoKo Pops', 'Naacho', 'PUB', 'Six14', 'Sympoh', 'Triple 8'];
-      var user = groups[userid-1];
+      var sel = document.getElementById("selectgroup")
+      console.log('selected', sel);
+      var user = sel.options[sel.selectedIndex].dataset.group;
     }
 
     var modal = document.getElementById("myModal");

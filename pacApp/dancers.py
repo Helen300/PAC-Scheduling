@@ -36,6 +36,7 @@ def schedule(request):
     context = createContext(starttoday, groups)
     context['user'] = profile
     context['firstname'] = profile
+
     if studentDets != None:
         first_name = studentDets['first_name']
         context['firstname'] = first_name
@@ -112,6 +113,7 @@ def updateBooking(request):
     context = createContext(startdate, groups)
     context['openday'] = openday.strftime('%w')
     context['booksuccess'] = success
+
     return render(request, "templates/pacApp/tableElements/calendar.html", context)
 
 # for multiple booking at a time

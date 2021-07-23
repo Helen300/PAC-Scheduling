@@ -19,18 +19,9 @@
 
 	<select id="myList" name="company_name" style="--webkit-appearance: default;">
 		<option value = "Select Company Name">Select Company Name</option>
-		<option value = "1">BAC</option>
-		<option value = "2">Bhangra</option>
-		<option value = "3">BodyHype</option>
-		<option value = "4">Disiac</option>
-		<option value = "5">eXpressions</option>
-		<option value = "6">HighSteppers</option>
-		<option value = "7">Kokopops</option>
-		<option value = "8">Naacho</option>
-		<option value = "9">PUB</option>
-		<option value = "10">Six14</option>
-		<option value = "11">Sympoh</option>
-		<option value = "12">Triple8</option>
+		{% for group, id in dance_groups.items %}
+		      <option value="{{ id }}" data-group="{{ group }}">{{ group }}</option>
+    {% endfor %}
 
 	</select>
 <br>

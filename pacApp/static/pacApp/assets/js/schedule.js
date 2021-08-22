@@ -711,7 +711,7 @@ function sendbook(id) {
       console.log('selected', sel);
       var user = sel.options[sel.selectedIndex].dataset.group;
     }
-
+    console.log("MY USERRR", user);
     var modal = document.getElementById("myModal");
     modal.style.display = "none"; 
     // uncheck this upon sending confirm
